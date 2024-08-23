@@ -1,0 +1,14 @@
+log: # Options: "combined", "player", "both", "off"
+  chat: "combined"
+  commands: "combined"
+  sessions: "combined"
+
+files:
+  chat: "{date}_chat.log"
+  commands: "{date}_commands.log"
+  sessions: "{date}_sessions.log"
+
+format:
+  chat: "{timestamp} - {player} » {message}"
+  commands: "{timestamp} - {player} » {command}"
+  sessions: "{timestamp} - {player} » {message}"

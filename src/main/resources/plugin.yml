@@ -1,0 +1,27 @@
+name: LogMaster
+version: 1.0.0
+main: gg.tjr.mc.logmaster.LogMasterPlugin
+api-version: 1.21
+commands:
+  logmaster:
+    description: Manage LogMaster
+    usage: /<command> reload
+    permission: "logmaster.admin"
+    permission-message: "You do not have permission to do that."
+permissions:
+  logmaster.ignore:
+    description: Players with this permission won't have their activities logged.
+    default: false
+    children:
+      logmaster.ignore.chat: true
+      logmaster.ignore.commands: true
+      logmaster.ignore.sessions: true
+  logmaster.ignore.chat:
+    description: Players with this permission won't have their chat messages logged.
+    default: false
+  logmaster.ignore.commands:
+    description: Players with this permission won't have their commands logged.
+    default: false
+  logmaster.ignore.sessions:
+    description: Players with this permission won't have their session events logged.
+    default: false
